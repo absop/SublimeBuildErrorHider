@@ -1,0 +1,11 @@
+[
+    {
+        "keys": ["escape"],
+        "command": "exec",
+        "args": { "hide_phantoms_only": true },
+        "context":
+        [
+            { "key": "error_phantom_visible", "operator": "equal", "operand": true }
+        ]
+    }
+]
