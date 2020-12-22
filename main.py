@@ -28,4 +28,6 @@ def plugin_loaded():
 
 class HidePhantomListener(sublime_plugin.ViewEventListener):
     def on_query_context(self, key, operator, operand, match_all):
-        return self.view.settings().get('error_phantom_visible', False)
+        if key == "error_phantom_visible":
+            return self.view.settings().get('error_phantom_visible', False)
+        return False
